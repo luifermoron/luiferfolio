@@ -2,12 +2,19 @@ apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: luiferfolio-ingress
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
 spec:
+  tls:
+  - hosts:
+    - luifermoron.com
+    secretName: "luifermoron.com-prod-tls"
   rules:
-    - host: luifermoron.com
-      http:
-        paths:
-          - path: /
-            backend:
-              serviceName: luiferfolio-service
-              servicePort: 80
+  - host: luifermoron.com
+    http:
+      paths:
+        - path: /
+          backend:
+            serviceName: luiferfolio-service
+            servicePort: 80
