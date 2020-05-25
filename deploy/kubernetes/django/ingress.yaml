@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Ingress
+metadata:
+  name: luiferfolio-ingress
+spec:
+  rules:
+    - host: luifermoron.com
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: luiferfolio-service
+              servicePort: 80
