@@ -21,3 +21,10 @@ spec:
         - name: luiferfolio
           image: luifermoron/luiferfolio:1.2
           imagePullPolicy: Always
+          resources:
+            limits:
+              cpu: 500m
+              memory: 512Mi
+            requests:
+              cpu: 100m
+              memory: 102Mi
