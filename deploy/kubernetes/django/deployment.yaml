@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: luiferfolio-deployment
+  labels:
+    app: luiferfolio
+    version: "1.0"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: luiferfolio
+      version: "1.0"
+  template:
+    metadata:
+      labels:
+        app: luiferfolio
+        version: "1.0"
+    spec:
+      containers:
+        - name: luiferfolio
+          image: luifermoron/luiferfolio:1.2
+          imagePullPolicy: Always
