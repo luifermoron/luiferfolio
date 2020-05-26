@@ -1,6 +1,9 @@
 # My Personal resume
 
-Basic resume about me. Made on Django and React because yes.
+Basic information about me. Technologies used:
+- Django(Because I like it)
+- React(Because I want to try it)
+- Kubernetes(Because I want to try it)
 
 ### Credits
 

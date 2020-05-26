@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: luiferfolio
-          image: luifermoron/luiferfolio:1.2
+          image: luifermoron/luiferfolio:1.3
           imagePullPolicy: Always
           resources:
             limits:
